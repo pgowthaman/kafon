@@ -15,14 +15,14 @@
 	src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 <style>
 h1, h5 {
-	display:inline;
+	text-align:center;
 
 }
 </style>
 </head>
 <body>
 	<header>
-	<h1 text-align:center >KAFON</h1>
+	<h1 >KAFON</h1>
 	<h5>(Konwledge And Fun ONline)</h5>
 	<nav class="navbar navbar-inverse">
 	<div class="container-fluid">

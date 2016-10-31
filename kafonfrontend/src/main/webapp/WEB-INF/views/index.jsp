@@ -22,12 +22,13 @@
 	<c:if test="${log}">
 		<jsp:include page="login.jsp"></jsp:include>
 	</c:if>
+	${failedlogin}
 	<c:if test="${reg}">
 		<jsp:include page="register.jsp"></jsp:include>
 	</c:if>
 	${successlogin} 
-	${failedlogin}
-	${reg1}
+<a href="suppliers">suppliers</a>
+<a href="category">category</a>
 
 </body>
 </html>

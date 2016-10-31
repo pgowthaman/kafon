@@ -42,4 +42,14 @@ public class HomeController {
 		m.addAttribute("reg1", "Successfully registered");
 		return "login";
 	}
+	@RequestMapping("/suppliers")
+	public String suppliers()
+	{
+		return "suppliers";
+	}
+	@RequestMapping("/category")
+	public String category()
+	{
+		return "category";
+	}
 }

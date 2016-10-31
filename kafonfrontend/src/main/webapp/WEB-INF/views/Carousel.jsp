@@ -34,7 +34,7 @@
 			<div class="carousel-inner" role="listbox">
 
 				<div class="item active">
-					<img src="C:\Users\gowthaman\Desktop\HTML\home1.jpg" alt="books"
+					<img src="WEB-INF\views\images\home1.JPEG" alt="books"
 						width="460" height="345">
 					<div class="carousel-caption">
 						<h3>kafon</h3>
@@ -43,7 +43,7 @@
 				</div>
 
 				<div class="item">
-					<img src="C:\Users\gowthaman\Desktop\HTML\home2.jpg" alt="books"
+					<img src="WEB-INF\views\images\home2.JPEG" alt="books"
 						width="460" height="345">
 					<div class="carousel-caption">
 						<h3>Knowledge</h3>
@@ -52,7 +52,7 @@
 				</div>
 
 				<div class="item">
-					<img src="C:\Users\gowthaman\Desktop\HTML\home3.jpg" alt="books"
+					<img src="WEB-INF\views\images\home3.JPEG" alt="books"
 						width="460" height="345">
 					<div class="carousel-caption">
 						<h3>Fun</h3>
@@ -61,7 +61,7 @@
 				</div>
 
 				<div class="item">
-					<img src="C:\Users\gowthaman\Desktop\HTML\home4.JPEG" alt="books"
+					<img src="WEB-INF\views\images\home4.JPEG" alt="books"
 						width="460" height="345">
 					<div class="carousel-caption">
 						<h3>In hand</h3>
