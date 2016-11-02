@@ -12,18 +12,6 @@
 	src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
 <script
 	src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-<script>
-	function validatePassword() {
-		var password = document.getElementById("password"), confirm_password = document
-				.getElementById("confirm_password");
-		if (password.value != confirm_password.value) {
-			//confirm_password.setCustomValidity("Passwords Don't Match");
-			alert("password miss match");
-		} else {
-			document.getElementById("login");
-		}
-	}
-</script>
 <title>Registration for online shopping</title>
 <style>
 body {
@@ -52,10 +40,11 @@ a {
 </head>
 
 <body>
+${fail}
 	<div class="register">
 		<h1>Registration form</h1>
 		<br> <br>
-		<form:form action="register">
+		<form action="register">
 			<table style="text-align: left;">
 				<tr>
 					<td><label for="firstname">Firstname</label></td>
@@ -88,12 +77,12 @@ a {
 				<tr>
 					<td><label for="password">Password</label></td>
 					<td>:</td>
-					<td><input type="password" id="password"></td>
+					<td><input type="password" id="password" name="password"></td>
 				</tr>
 				<tr>
 					<td><label for="confirm_password">Confirm password</label></td>
 					<td>:</td>
-					<td><input type="password" id="confirm_password"></td>
+					<td><input type="password" id="confirm_password" name="confirm"></td>
 				</tr>
 				<tr>
 					<td><label for="address1">Address1</label></td>
@@ -140,7 +129,7 @@ a {
 			<br>
 			<input type="reset" value="reset">
 			<input type="submit" value="submit">
-		</form:form>
+		</form>
 	</div>
 </body>
 </html>

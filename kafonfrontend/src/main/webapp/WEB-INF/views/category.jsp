@@ -7,6 +7,7 @@
 <title>category</title>
 </head>
 <body>
+<jsp:include page="header.jsp"></jsp:include>
 <form>
 <table>
 <tr>
@@ -27,10 +28,6 @@
 	<td><input type="text" id="description" name="description"
 						placeholder="Description"></td>
 </tr>
-
-
-
-
 </table>
 </form>
 

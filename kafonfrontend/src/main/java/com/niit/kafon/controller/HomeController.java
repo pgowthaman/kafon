@@ -10,7 +10,7 @@ public class HomeController {
 
 	@RequestMapping("/")
 	public String index(Model model) {
-		model.addAttribute("carousel","true");
+		model.addAttribute("carousel", "true");
 		return "index";
 	}
 
@@ -36,20 +36,33 @@ public class HomeController {
 		model.addAttribute("reg", "true");
 		return "index";
 	}
-	
+
 	@RequestMapping("/register")
-	public String register(Model m){
-		m.addAttribute("reg1", "Successfully registered");
-		return "login";
+	public String register(@RequestParam("password") String password, @RequestParam("confirm") String confirm, Model model) {
+		if (password.equals(confirm)) {
+			model.addAttribute("reg", "successfully logged in");
+			return "login";
+		} else {
+			model.addAttribute("fail", "Failed to log in");
+			return "registerHere";
+		}
 	}
+
 	@RequestMapping("/suppliers")
-	public String suppliers()
-	{
+	public String suppliers() {
 		return "suppliers";
 	}
+	@RequestMapping("/product")
+	public String product() {
+		return "product";
+	}
 	@RequestMapping("/category")
-	public String category()
-	{
+	public String category() {
 		return "category";
+	}
+    @RequestMapping("/home")
+	public String home(Model model) {
+		model.addAttribute("carousel", "true");
+		return "index";
 	}
 }

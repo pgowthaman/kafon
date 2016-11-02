@@ -38,11 +38,11 @@ a {
 <c:if test="${not empty failedlogin}">
 <jsp:include page="header.jsp"></jsp:include>
 </c:if>	
-<c:if test="${not empty reg1}">
+<c:if test="${not empty reg}">
 <jsp:include page="header.jsp"></jsp:include>
 </c:if>	
 ${failedlogin}
-${reg1}
+${reg}
 
 <div class="login">
 		<h1 id="login">Login</h1>

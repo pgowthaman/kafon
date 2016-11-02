@@ -26,10 +26,10 @@
 	<c:if test="${reg}">
 		<jsp:include page="register.jsp"></jsp:include>
 	</c:if>
-	${successlogin} 
-<a href="suppliers">suppliers</a>
-<a href="category">category</a>
-
+	${successlogin}
+	<c:if test="${successlogin}">
+		<jsp:include page="Carousel.jsp"></jsp:include>
+	</c:if> 
 </body>
 </html>
 

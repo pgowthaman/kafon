@@ -27,15 +27,15 @@ h1, h5 {
 	<nav class="navbar navbar-inverse">
 	<div class="container-fluid">
 		<ul class="nav navbar-nav">
-			<li class="active"><a href="index">Home<span
+			<li class="active"><a href="home">Home<span
 					class="glyphicon glyphicon-home"></span>
 			</a></li>
 			<li class="dropdown"><a class="dropdown-toggle"
 				data-toggle="dropdown" href="#">Categories <span class="caret"></span></a>
 				<ul class="dropdown-menu">
-					<li><a href="#">Page 1-1</a></li>
-					<li><a href="#">Page 1-2</a></li>
-					<li><a href="#">Page 1-3</a></li>
+					<li><a href="product">Product</a></li>
+					<li><a href="suppliers">Supplier</a></li>
+					<li><a href="category">Category</a></li>
 				</ul></li>
 			<li><a href="#">Contact</a></li>
 			<li><a href="#">About</a></li>
@@ -46,7 +46,7 @@ h1, h5 {
 			<c:if test="${not empty successlogin}">
 				<li><a href="#">my cart <span
 						class="glyphicon glyphicon-shopping-cart"></span></a></li>
-				<li><a href="#">Logout <span
+				<li><a href="home">Logout <span
 						class="glyphicon glyphicon-log-out"></span></a></li>
 			</c:if>
 			<c:if test="${empty successlogin}">

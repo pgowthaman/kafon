@@ -20,6 +20,7 @@
 </style>
 </head>
 <body>
+
 	<div class="container">
 		<div id="myCarousel" class="carousel slide" data-ride="carousel">
 			<!-- Indicators -->
@@ -34,7 +35,7 @@
 			<div class="carousel-inner" role="listbox">
 
 				<div class="item active">
-					<img src="WEB-INF\views\images\home1.JPEG" alt="books"
+					<img src="D:\eclipse\kafonfrontend\src\main\resources\image\home1.jpeg" alt="books"
 						width="460" height="345">
 					<div class="carousel-caption">
 						<h3>kafon</h3>
@@ -43,7 +44,7 @@
 				</div>
 
 				<div class="item">
-					<img src="WEB-INF\views\images\home2.JPEG" alt="books"
+					<img src="D:\eclipse\kafonfrontend\src\main\resources\image\home2.jpeg" alt="books"
 						width="460" height="345">
 					<div class="carousel-caption">
 						<h3>Knowledge</h3>
@@ -52,7 +53,7 @@
 				</div>
 
 				<div class="item">
-					<img src="WEB-INF\views\images\home3.JPEG" alt="books"
+					<img src="D:\eclipse\kafonfrontend\src\main\resources\image\home3.jpg" alt="books"
 						width="460" height="345">
 					<div class="carousel-caption">
 						<h3>Fun</h3>
@@ -61,7 +62,7 @@
 				</div>
 
 				<div class="item">
-					<img src="WEB-INF\views\images\home4.JPEG" alt="books"
+					<img src="D:\eclipse\kafonfrontend\src\main\resources\image\home4.jpeg" alt="books"
 						width="460" height="345">
 					<div class="carousel-caption">
 						<h3>In hand</h3>
