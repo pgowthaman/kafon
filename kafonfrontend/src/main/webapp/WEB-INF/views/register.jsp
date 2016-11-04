@@ -3,6 +3,7 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <%@taglib uri="http://www.springframework.org/tags/form" prefix="form"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -40,6 +41,9 @@ a {
 </head>
 
 <body>
+<c:if test=" ${not empty fail}">
+<jsp:include page="header.jsp"></jsp:include>
+</c:if>
 ${fail}
 	<div class="register">
 		<h1>Registration form</h1>

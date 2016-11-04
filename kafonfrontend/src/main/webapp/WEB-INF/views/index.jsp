@@ -27,9 +27,12 @@
 		<jsp:include page="register.jsp"></jsp:include>
 	</c:if>
 	${successlogin}
-	<c:if test="${successlogin}">
+	<c:if test="${not empty successlogin}">
 		<jsp:include page="Carousel.jsp"></jsp:include>
 	</c:if> 
+	<c:if test="${fail}">
+	<jsp:include page="register.jsp"></jsp:include>
+	</c:if>
 </body>
 </html>
 
