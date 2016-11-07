@@ -8,33 +8,50 @@
 <link rel="stylesheet"
 	href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 <script
-	src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+	src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"
+	type="text/javascript"></script>
 <script
-	src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-<style>
+	src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"
+	type="text/javascript"></script>
+<style type="text/css">
 </style>
 </head>
 <body>
+	<c:if test="${empty successadmin}">
 	<jsp:include page="header.jsp"></jsp:include>
+	</c:if>
 	<c:if test="${carousel}">
-		<jsp:include page="Carousel.jsp"></jsp:include>
-	</c:if>
-	<c:if test="${log}">
-		<jsp:include page="login.jsp"></jsp:include>
-	</c:if>
-	${failedlogin}
-	<c:if test="${reg}">
-		<jsp:include page="register.jsp"></jsp:include>
+		<jsp:include page="Carousel.jsp" />
 	</c:if>
 	${successlogin}
 	<c:if test="${not empty successlogin}">
-		<jsp:include page="Carousel.jsp"></jsp:include>
-	</c:if> 
-	<c:if test="${fail}">
-	<jsp:include page="register.jsp"></jsp:include>
+		<jsp:include page="Carousel.jsp" />
 	</c:if>
+	<c:if test="${not empty successadmin}">
+		<jsp:include page="headeradmin.jsp" />
+	</c:if>
+	${successadmin}
+	<c:if test="${log}">
+		<jsp:include page="login.jsp" />
+	</c:if>
+	${failedlogin}
+	<c:if test="${not empty failedlogin}">
+		<jsp:include page="login.jsp" />
+	</c:if>
+	<c:if test="${reg}">
+		<jsp:include page="register.jsp" />
+	</c:if>
+	${failedregister}
+	<c:if test="${not empty failedregister}">
+		<jsp:include page="register.jsp" />
+	</c:if>
+	${successregister}
+	<c:if test="${not empty successregister}">
+		<jsp:include page="login.jsp" />
+	</c:if>
+	<c:if test="${contact}">
+		<jsp:include page="contact.jsp" />
+	</c:if>
+	<jsp:include page="footer.jsp"></jsp:include>
 </body>
 </html>
-
-
-

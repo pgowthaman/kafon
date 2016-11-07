@@ -18,6 +18,7 @@ h1, h5 {
 	text-align:center;
 
 }
+
 </style>
 </head>
 <body>
@@ -27,7 +28,7 @@ h1, h5 {
 	<nav class="navbar navbar-inverse">
 	<div class="container-fluid">
 		<ul class="nav navbar-nav">
-			<li class="active"><a href="home">Home<span
+			<li><a href="home">Home<span
 					class="glyphicon glyphicon-home"></span>
 			</a></li>
 			<li class="dropdown"><a class="dropdown-toggle"
@@ -37,10 +38,11 @@ h1, h5 {
 					<li><a href="suppliers">Supplier</a></li>
 					<li><a href="category">Category</a></li>
 				</ul></li>
-			<li><a href="#">Contact</a></li>
-			<li><a href="#">About</a></li>
-			<li><div color:white>Search</div> <input type="text"
-				placeholder="search,catogeries,booknames,authors...." size="45"></li>
+			<li><a href="contact">Contact</a></li>
+			<li><a href="about">About</a></li>
+			<li><a href="#"><label for=""search">Search:</label>
+			 <input type="text" name="search" id="search"
+				placeholder="search,catogeries,booknames,authors...." size="45"></a></li>
 		</ul>
 		<ul class="nav navbar-nav navbar-right">
 			<c:if test="${not empty successlogin}">

@@ -7,9 +7,27 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
 <title>Supplier</title>
+<style>
+body {
+	background-image: url("/resources/login.jpg");
+	background-repeat: no-repeat;
+	background-size: 600px;
+}
+
+div.supplier {
+	text-align: center;
+	border: 0px;
+	margin-top: 100px;
+	margin-left: 500px;
+	margin-right: 500px;
+	margin-bottom: 110px;
+	padding: 20px;
+}
+</style>
 </head>
 <body>
-<jsp:include page="header.jsp"></jsp:include>
+<div class="supplier">
+<h1>Supplier</h1>
 <form>
 <table>
 <tr>
@@ -30,7 +48,10 @@
 	<td><input type="text" path="address" id="address" name="address"
 						placeholder="supplierAddress"/></td>
 </tr>
-</table>						 
+</table>
+<a href="#"> <input type="submit" value="save"></a> <a
+				href="#"> <input type="button" value="delete"></a>						 
 </form>
+</div>
 </body>
 </html>

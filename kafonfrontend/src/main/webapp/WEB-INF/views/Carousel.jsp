@@ -17,6 +17,19 @@
 	width: 70%;
 	margin: auto;
 }
+div.description
+  {
+  width:45%;
+  margin:10px;
+  padding:10px;
+  padding-bottom:275px;
+  border:2px solid black;
+  float:left;
+  }
+  div.video
+  {
+  padding:10px;
+  }
 </style>
 </head>
 <body>
@@ -62,7 +75,7 @@
 				</div>
 
 				<div class="item">
-					<img src="D:\eclipse\kafonfrontend\src\main\resources\image\home4.jpeg" alt="books"
+					<img src="D:\eclipse\kafon\src\main\webapp\resources\home4.jpeg" alt="books"
 						width="460" height="345">
 					<div class="carousel-caption">
 						<h3>In hand</h3>
@@ -84,6 +97,20 @@
 			</a>
 		</div>
 	</div>
-
+	<br>
+<br>
+<div class="description">
+<h1 style="padding-left:10px;">KAFON</h1>
+<p>The abbrivation kafon is Knowledge And Fun ONline. It is one of the website where we can find all kind of books from childern to elders.
+This website also allows you to read the preview and some summary of the books for two reasons to create interest in a person to buy the book 
+as well as to make a person choose what he wants.</p>
+</div>
+<div class="video">
+<video  width="700" height="410" controls >
+<source src="html.mp4"> 
+</video>
+</div>
+<br>
+<br>
 </body>
 </html>

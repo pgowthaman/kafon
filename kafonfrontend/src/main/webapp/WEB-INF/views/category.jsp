@@ -6,8 +6,26 @@
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
 <title>category</title>
 </head>
+<style>
+body {
+	background-image: url("/resources/login.jpg");
+	background-repeat: no-repeat;
+	background-size: 600px;
+}
+
+div.category {
+	text-align: center;
+	border: 0px;
+	margin-top: 100px;
+	margin-left: 500px;
+	margin-right: 500px;
+	margin-bottom: 110px;
+	padding: 20px;
+}
+</style>
 <body>
-<jsp:include page="header.jsp"></jsp:include>
+<div class="category">
+<h1>category</h1>
 <form>
 <table>
 <tr>
@@ -29,7 +47,10 @@
 						placeholder="Description"></td>
 </tr>
 </table>
+<a href="#"> <input type="submit" value="save"></a> <a
+				href="#"> <input type="button" value="delete"></a>
 </form>
+</div>
 
 </body>
 </html>

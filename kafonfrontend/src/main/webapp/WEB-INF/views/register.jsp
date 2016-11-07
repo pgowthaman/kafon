@@ -5,136 +5,222 @@
 <%@taglib uri="http://www.springframework.org/tags/form" prefix="form"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <head>
-<meta charset="utf-8">
+<meta charset="utf-8" content="">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet"
 	href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 <script
-	src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+	src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"
+	type="text/javascript"></script>
 <script
-	src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"
+	type="text/javascript"></script>
 <title>Registration for online shopping</title>
 <style>
-body {
-	background-image: url("login.JPG");
-	background-repeat: no-repeat;
-	background-size: 600px;
-}
 
-h1, h5 {
-	display: inline;
-}
+		body { 
+			background: #eee; 
+		}
 
-div.register {
-	text-align: center;
-	border: 0px;
-	margin-top: 50px;
-	margin-left: 500px;
-	margin-right: 500px;
-	padding: 20px;
-}
+		/*------------------------------*/
 
-a {
-	text-decoration: none;
-}
-</style>
-</head>
+		#signup {
+			width: 550px;
+			height: 1300px;
+			margin: 100px auto 50px auto;
+			padding: 20px;
+			position: relative;
+			background: #fff url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAMAAAAECAMAAAB883U1AAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAAlQTFRF7+/v7u7u////REBVnAAAAAN0Uk5T//8A18oNQQAAABZJREFUeNpiYGJiYmBiYgRiBhAGCDAAALsAFJhiJ+UAAAAASUVORK5CYII=);
+			border: 1px solid #ccc;
+			-moz-border-radius: 3px;
+			-webkit-border-radius: 3px; 
+			border-radius: 3px;  
+		}
+
+		#signup::before, 
+		#signup::after {
+			content: "";
+			position: absolute;
+			bottom: -3px;
+			left: 2px;
+			right: 2px;
+			top: 0;
+			z-index: -1;
+			background: #fff;
+			border: 1px solid #ccc;			
+		}
+
+		#signup::after {
+			left: 4px;
+			right: 4px;
+			bottom: -5px;
+			z-index: -2;
+			-moz-box-shadow: 0 8px 8px -5px rgba(0,0,0,.3);
+			-webkit-box-shadow: 0 8px 8px -5px rgba(0,0,0,.3);
+			box-shadow: 0 8px 8px -5px rgba(0,0,0,.3);
+		}
+
+		/*------------------------------*/
+
+		#signup h1 {
+			position: relative;
+			font: italic 1em/3.5em 'trebuchet MS',Arial, Helvetica;
+			color: #999;
+			text-align: center;
+			margin: 0 0 20px;
+		}
+
+		#signup h1::before,
+		#signup h1::after{
+			content:'';
+			position: absolute;
+			border: 1px solid rgba(0,0,0,.15);
+			top: 10px;
+			bottom: 10px;
+			left: 0;
+			right: 0;
+		}
+
+		#signup h1::after{
+			top: 0;
+			bottom: 0;
+			left: 10px;
+			right: 10px;
+		}
+
+		/*------------------------------*/
+
+        ::-webkit-input-placeholder {
+           color: #bbb;
+        }
+        
+        :-moz-placeholder {
+           color: #bbb;
+        } 				    	
+
+		.placeholder{
+			color: #bbb; /* polyfill */
+		}		
+
+		#signup input{
+			margin: 5px 0;
+			padding: 15px;
+			width: 100%;
+			*width: 518px;
+			-moz-box-sizing: border-box;
+			box-sizing: border-box;
+			border: 1px solid #ccc;
+			-moz-border-radius: 3px;
+			-webkit-border-radius: 3px;
+			border-radius: 3px;	
+		}
+
+		#signup input:focus{
+			outline: 0;
+			border-color: #aaa;
+			-moz-box-shadow: 0 2px 1px rgba(0, 0, 0, .3) inset;
+			-webkit-box-shadow: 0 2px 1px rgba(0, 0, 0, .3) inset;
+			box-shadow: 0 2px 1px rgba(0, 0, 0, .3) inset;
+		}		
+
+		#signup button{
+			margin: 20px 0 0 0;
+			padding: 15px 8px;			
+			width: 100%;
+			cursor: pointer;
+			border: 1px solid #2493FF;
+			overflow: visible;
+			display: inline-block;
+			color: #fff;
+			font: bold 1.4em arial, helvetica;
+			text-shadow: 0 -1px 0 rgba(0,0,0,.4);		  
+			background-color: #2493ff;
+			background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(255,255,255,.5)), to(rgba(255,255,255,0)));
+			background-image: -webkit-linear-gradient(top, rgba(255,255,255,.5), rgba(255,255,255,0));
+			background-image: -moz-linear-gradient(top, rgba(255,255,255,.5), rgba(255,255,255,0));
+			background-image: -ms-linear-gradient(top, rgba(255,255,255,.5), rgba(255,255,255,0));
+			background-image: -o-linear-gradient(top, rgba(255,255,255,.5), rgba(255,255,255,0));
+			background-image: linear-gradient(top, rgba(255,255,255,.5), rgba(255,255,255,0));
+			-webkit-transition: background-color .2s ease-out;
+			-moz-transition: background-color .2s ease-out;
+			-ms-transition: background-color .2s ease-out; 
+			-o-transition: background-color .2s ease-out;  
+			transition: background-color .2s ease-out;
+			-moz-border-radius: 3px;
+			-webkit-border-radius: 3px;
+			border-radius: 3px;
+			-moz-box-shadow:  0 2px 1px rgba(0, 0, 0, .3),
+							  0 1px 0 rgba(255, 255, 255, .5) inset;
+			-webkit-box-shadow: 0 2px 1px rgba(0, 0, 0, .3),
+								0 1px 0 rgba(255, 255, 255, .5) inset;
+			box-shadow: 0 2px 1px rgba(0, 0, 0, .3),
+						0 1px 0 rgba(255, 255, 255, .5) inset;			  						  
+		}
+
+		#signup button:hover{
+		  	background-color: #7cbfff;
+            border-color: #7cbfff;
+		}
+
+		#signup button:active{
+			position: relative;
+			top: 3px;
+			text-shadow: none;
+			-moz-box-shadow: 0 1px 0 rgba(255, 255, 255, .3) inset;
+			-webkit-box-shadow: 0 1px 0 rgba(255, 255, 255, .3) inset;
+			box-shadow: 0 1px 0 rgba(255, 255, 255, .3) inset;
+		}
+
+		/* ------------------------------------------------- */
+
+		#about{
+		    color: #999;
+		    text-align: center;
+		    font: 0.9em Arial, Helvetica;
+		}
+
+		#about a{
+		    color: #777;
+		}		
+	</style>    
+	</head>
 
 <body>
-<c:if test=" ${not empty fail}">
-<jsp:include page="header.jsp"></jsp:include>
-</c:if>
-${fail}
-	<div class="register">
-		<h1>Registration form</h1>
-		<br> <br>
-		<form action="register">
-			<table style="text-align: left;">
-				<tr>
-					<td><label for="firstname">Firstname</label></td>
-					<td>:</td>
-					<td><input type="text" id="firstname" name="firstname"
-						placeholder="firstname"></td>
-				</tr>
-				<tr>
-					<td><label for="middlename">Middlename</label></td>
-					<td>:</td>
-					<td><input type="text" id="Middlename"
-						placeholder="middlename"></td>
-				</tr>
-				<tr>
-					<td><label for="lastname">Lastname</label></td>
-					<td>:</td>
-					<td><input type="text" id="lastname" placeholder="lastname"></td>
-				</tr>
-				<tr>
-					<td><label for="phonenumber">Phone no</label></td>
-					<td>:</td>
-					<td><input type="number" id="phonenumber"
-						placeholder="phonenumber"></td>
-				</tr>
-				<tr>
-					<td><label for="emailid">Emailid</label></td>
-					<td>:</td>
-					<td><input type="email" id="emailid" placeholder="emailid"></td>
-				</tr>
-				<tr>
-					<td><label for="password">Password</label></td>
-					<td>:</td>
-					<td><input type="password" id="password" name="password"></td>
-				</tr>
-				<tr>
-					<td><label for="confirm_password">Confirm password</label></td>
-					<td>:</td>
-					<td><input type="password" id="confirm_password" name="confirm"></td>
-				</tr>
-				<tr>
-					<td><label for="address1">Address1</label></td>
-					<td>:</td>
-					<td><input type="text" id="address1" name=""></td>
-				</tr>
-				<tr>
-					<td><label for="address2">Address2<label></td>
-					<td>:</td>
-					<td><input type="text" id="address2" name=""></td>
-				</tr>
-				<tr>
-					<td><label for="district">District</label></td>
-					<td>:</td>
-					<td><select>
-							<option value="district" selected="selected">choose the
-								district</option>
-							<option value="chennai">Chennai</option>
-							<option value="banglore">Bangalore</option>
-							<option value="mumbai">Mumbai</option>
-							<option value="kolkata">Kolkata</option>
-							<option value="delhi">Delhi</option>
-							<option value="pune">Pune</option></td>
-				</tr>
-				<tr>
-					<td><label for="state">State</label></td>
-					<td>:</td>
-					<td><select>
-							<option value="state" selected="selected">choose the
-								state</option>
-							<option value="tamilnadu">Tamilnadu</option>
-							<option value="karnataka">Karnataka</option>
-							<option value="maharastra">Maharastra</option>
-							<option value="westbengal">Westbengal</option>
-							<option value="newdelhi">NewDelhi</option></td>
-				</tr>
-				<tr>
-					<td><label for="pincode">Pincode</label></td>
-					<td>:</td>
-					<td><input type="text" id="pincode" name=""></td>
-				</tr>
-			</table>
-			<br>
-			<br>
-			<input type="reset" value="reset">
-			<input type="submit" value="submit">
-		</form>
-	</div>
-</body>
+<form id="signup" action="register" method="POST">
+		<h1>Registration Form</h1>
+		<label for="firstname">Firstname:</label>
+		<input type="text" id="firstname" name="firstname"
+						placeholder="firstname">
+		<label for="middlename">Middlename:</label>
+		<input type="text" id="Middlename"
+						placeholder="middlename">
+		<label for="lastname">Lastname:</label>
+		<input type="text" id="lastname" placeholder="lastname">
+		<label for="phonenumber">Phone no:</label>
+		<input type="number" id="phonenumber"
+						placeholder="phonenumber">
+		<label for="email">Email:</label>
+		<input type="email"  name="email" placeholder="email" required="">
+		<label for="password">Password:</label>
+		<input type="password" name="password" placeholder="Choose your password" required="">
+        <label for="confirm">Confirm Password:</label>     
+		<input type="password" name="confirm"placeholder="Confirm password" required="">
+		<label for="address1">Address1:</label>
+		<input type="text" id="address1" name="address1">
+		<label for="address1">Address2:</label>
+		<input type="text" id="address2" name="address2">
+		<label for="city">City:</label>
+		<input type="text" id="city" name="city">
+		<label for="state">State:</label>
+		<input type="text" id="state" name="state">
+		<label for="country">Country:</label>
+		<input type="text" id="country" name="country">
+		<label for="pin">Pincode:</label>
+		<input type="text" id="pin" name="pin">
+		<button type="submit">register</button>	
+	</form>
+
+
+	</body>
 </html>
 
