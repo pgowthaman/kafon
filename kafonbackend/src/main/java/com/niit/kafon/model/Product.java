@@ -20,6 +20,10 @@ public class Product {
 	private String category_id;
 	@Column(name="supplier_id")
 	private String supplier_id;
+public Product(){
+		
+	}
+	
 	public String getId() {
 		return id;
 	}

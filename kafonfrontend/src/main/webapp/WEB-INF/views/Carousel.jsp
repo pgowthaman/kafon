@@ -1,21 +1,40 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
 	pageEncoding="ISO-8859-1"%>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
-<html>
 <head>
-<title>Welcome to KAFON</title>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet"
-	href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-<script
-	src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-<script
-	src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<meta charset="UTF-8">
+<title>Carousel</title>
+<link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/3.0.3/css/bootstrap.min.css">
+<link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/3.0.3/css/bootstrap-theme.min.css">
+<script type="text/javascript" src="http://code.jquery.com/jquery.min.js"></script>
+<script src="http://netdna.bootstrapcdn.com/bootstrap/3.0.3/js/bootstrap.min.js"></script>
 <style>
+
 .carousel-inner>.item>img, .carousel-inner>.item>a>img {
-	width: 70%;
 	margin: auto;
+}
+.item{
+    background: white;    
+    text-align: center;
+    height: 500px !important;
+}
+
+.carousel{
+    margin-top: 20px;
+}
+
+.bs-example{
+	margin: 20px;
+}
+
+.carousel.carousel-fade .item {
+  opacity:0;
+  filter: alpha(opacity=0); /* ie fix */
+}
+
+.carousel.carousel-fade .active.item {
+    opacity:1;
+    filter: alpha(opacity=100); /* ie fix */
 }
 div.description
   {
@@ -33,71 +52,56 @@ div.description
 </style>
 </head>
 <body>
-
-	<div class="container">
-		<div id="myCarousel" class="carousel slide" data-ride="carousel">
-			<!-- Indicators -->
-			<ol class="carousel-indicators">
-				<li data-target="#myCarousel" data-slide-to="0" class="active"></li>
-				<li data-target="#myCarousel" data-slide-to="1"></li>
-				<li data-target="#myCarousel" data-slide-to="2"></li>
-				<li data-target="#myCarousel" data-slide-to="3"></li>
-			</ol>
-
-			<!-- Wrapper for slides -->
-			<div class="carousel-inner" role="listbox">
-
-				<div class="item active">
-					<img src="D:\eclipse\kafonfrontend\src\main\resources\image\home1.jpeg" alt="books"
-						width="460" height="345">
-					<div class="carousel-caption">
-						<h3>kafon</h3>
-
-					</div>
-				</div>
-
-				<div class="item">
-					<img src="D:\eclipse\kafonfrontend\src\main\resources\image\home2.jpeg" alt="books"
-						width="460" height="345">
-					<div class="carousel-caption">
-						<h3>Knowledge</h3>
-
-					</div>
-				</div>
-
-				<div class="item">
-					<img src="D:\eclipse\kafonfrontend\src\main\resources\image\home3.jpg" alt="books"
-						width="460" height="345">
-					<div class="carousel-caption">
-						<h3>Fun</h3>
-
-					</div>
-				</div>
-
-				<div class="item">
-					<img src="D:\eclipse\kafon\src\main\webapp\resources\home4.jpeg" alt="books"
-						width="460" height="345">
-					<div class="carousel-caption">
-						<h3>In hand</h3>
-
-					</div>
-				</div>
-
-			</div>
-
-			<!-- Left and right controls -->
-			<a class="left carousel-control" href="#myCarousel" role="button"
-				data-slide="prev"> <span
-				class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
-				<span class="sr-only">Previous</span>
-			</a> <a class="right carousel-control" href="#myCarousel" role="button"
-				data-slide="next"> <span
-				class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
-				<span class="sr-only">Next</span>
-			</a>
-		</div>
-	</div>
-	<br>
+<div class="bs-example">
+    <div id="myCarousel" class="carousel slide" data-interval="6500" data-ride="carousel">
+    	<!-- Carousel indicators -->
+        <ol class="carousel-indicators">
+            <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+            <li data-target="#myCarousel" data-slide-to="1"></li>
+            <li data-target="#myCarousel" data-slide-to="2"></li>
+            <li data-target="#myCarousel" data-slide-to="3"></li>
+        </ol>   
+       <!-- Carousel items -->
+        <div class="carousel-inner">
+            <div class="active item carousel-fade">
+                <img src="https://mulieresaequanimitas.files.wordpress.com/2016/03/books.jpg" alt="books" width="1500" height="175">
+                <div class="carousel-caption">
+                  <h3>kafon</h3>
+                  <p>Knowledge And Fun ONline</p>
+                </div>
+            </div>
+            <div class="item carousel-fade">
+                <img src="http://www.edushine.in/wp-content/uploads/2014/12/Higher-Education.jpg" alt="books" width="1500" height="175">
+                <div class="carousel-caption">
+                  <h3>Knowledge</h3>
+                  <p>Educational books</p>
+                </div>
+            </div>
+            <div class="item carousel-fade">
+				<img src="http://www.philareads.org/wp-content/uploads/2015/09/kids-Reading-Books-group-1.jpg" alt="books" width="1500" height="175">
+                <div class="carousel-caption">
+                  <h3>kids</h3>
+                  <p>Story and other kids books</p>
+                </div>
+            </div>
+			<div class="item carousel-fade">
+                <img src="https://images5.alphacoders.com/403/403408.jpg" alt="books" width="1500" height="175">
+                <div class="carousel-caption">
+                  <h3>Fiction</h3>
+                  <p>All imaginative books</p>
+                </div>
+            </div>
+        </div>
+        <!-- Carousel nav -->
+        <a class="carousel-control left" href="#myCarousel" data-slide="prev">
+            <span class="glyphicon glyphicon-chevron-left"></span>
+        </a>
+        <a class="carousel-control right" href="#myCarousel" data-slide="next">
+            <span class="glyphicon glyphicon-chevron-right"></span>
+        </a>
+    </div>
+</div>
+<br>
 <br>
 <div class="description">
 <h1 style="padding-left:10px;">KAFON</h1>
@@ -107,10 +111,11 @@ as well as to make a person choose what he wants.</p>
 </div>
 <div class="video">
 <video  width="700" height="410" controls >
-<source src="html.mp4"> 
+<source src="https://www.youtube.com/watch?v=FzW4S1qHrIQ"> 
 </video>
 </div>
 <br>
 <br>
+
 </body>
-</html>
+</html>                                		

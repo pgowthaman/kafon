@@ -9,7 +9,7 @@ import org.springframework.stereotype.Component;
 @Entity			//This is not normal class we are going to map it to the table in database
 @Table			//If the table name is same as class name, you no need to specify name or else
 				//mention as(name="category")
-@Component		//It is used to create the instance of the class with same name as class name with 1st letter 
+@Component("category")		//It is used to create the instance of the class with same name as class name with 1st letter 
 				//as smaller case
 public class Category {
 	@Id

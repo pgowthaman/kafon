@@ -8,7 +8,7 @@ import javax.persistence.Table;
 import org.springframework.stereotype.Component;
 @Entity
 @Table
-@Component
+@Component("supplier")
 public class Supplier {
 	@Id
 	private String id;
@@ -16,6 +16,9 @@ public class Supplier {
 	private String name;	
 	@Column(name="address")
 	private String address;
+	public Supplier(){
+		
+	}
 	public String getId() {
 		return id;
 	}

@@ -2,17 +2,17 @@ package com.niit.kafon.dao.impl;
 
 import java.util.List;
 
-import org.hibernate.HibernateException;
-import org.hibernate.Query;
+import org.hibernate.query.Query;
 import org.hibernate.SessionFactory;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Component;
 import org.springframework.stereotype.Repository;
 import org.springframework.transaction.annotation.Transactional;
 
 import com.niit.kafon.dao.CategoryDAO;
 import com.niit.kafon.model.Category;
 
-@Repository("CategoryDAO")
+@Repository("categoryDAO")
 public class CategoryDAOImpl implements CategoryDAO {
 
 	@Autowired
@@ -28,8 +28,8 @@ public class CategoryDAOImpl implements CategoryDAO {
 		try {
 			sessionFactory.getCurrentSession().save(category);
 			return true;
-		} catch (HibernateException e) {
-			// TODO Auto-generated catch block
+		} catch (Exception e) {
+			
 			e.printStackTrace();
 			return false;
 		}
@@ -40,8 +40,8 @@ public class CategoryDAOImpl implements CategoryDAO {
 		try {
 			sessionFactory.getCurrentSession().update(category);
 			return true;
-		} catch (HibernateException e) {
-			// TODO Auto-generated catch block
+		} catch (Exception e) {
+			
 			e.printStackTrace();
 			return false;
 		}
@@ -53,8 +53,8 @@ public class CategoryDAOImpl implements CategoryDAO {
 		try {
 			sessionFactory.getCurrentSession().delete(category);
 			return true;
-		} catch (HibernateException e) {
-			// TODO Auto-generated catch block
+		} catch (Exception e) {
+		
 			e.printStackTrace();
 			return false;
 		}

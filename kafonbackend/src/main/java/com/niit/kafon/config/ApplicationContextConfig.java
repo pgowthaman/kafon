@@ -3,8 +3,6 @@ package com.niit.kafon.config;
 import java.util.Properties;
 
 import javax.sql.DataSource;
-
-import org.apache.commons.dbcp2.BasicDataSource;
 import org.hibernate.SessionFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
@@ -16,9 +14,10 @@ import org.springframework.orm.hibernate4.LocalSessionFactoryBuilder;
 import org.springframework.transaction.annotation.EnableTransactionManagement;
 
 import com.niit.kafon.model.Category;
+import com.niit.kafon.model.Supplier;
 
 @Configuration
-@ComponentScan("com.niit.shopingcart")
+@ComponentScan("com.niit.kafon")
 @EnableTransactionManagement
 public class ApplicationContextConfig {
 
@@ -27,7 +26,7 @@ public class ApplicationContextConfig {
 
 		DriverManagerDataSource dataSource = new DriverManagerDataSource();
 			
-		dataSource.setUrl("jdbc:h2:tcp://localhost/~/NIITDB");
+		dataSource.setUrl("jdbc:h2:~/test");
 
 		dataSource.setDriverClassName("org.h2.Driver");
 
@@ -51,6 +50,7 @@ public class ApplicationContextConfig {
 		LocalSessionFactoryBuilder sessionBuilder = new LocalSessionFactoryBuilder(dataSource);
 		sessionBuilder.addProperties(getHibernateProperties());
 		sessionBuilder.addAnnotatedClass(Category.class);
+		sessionBuilder.addAnnotatedClass(Supplier.class);
 			return sessionBuilder.buildSessionFactory();
 	}
 
@@ -58,7 +58,7 @@ public class ApplicationContextConfig {
 	@Bean(name = "transactionManager")
 	public HibernateTransactionManager getTransactionManager(SessionFactory sessionFactory) {
 		HibernateTransactionManager transactionManager = new HibernateTransactionManager(sessionFactory);
-
+		
 		return transactionManager;
 	}
 }

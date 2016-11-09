@@ -14,6 +14,10 @@
 	src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"
 	type="text/javascript"></script>
 <style type="text/css">
+body {
+	background-image: url("http://wallpapercave.com/wp/LOodQ4x.jpg");
+	
+}
 </style>
 </head>
 <body>
@@ -22,10 +26,12 @@
 	</c:if>
 	<c:if test="${carousel}">
 		<jsp:include page="Carousel.jsp" />
+		<jsp:include page="categroylist.jsp"></jsp:include>
 	</c:if>
 	${successlogin}
 	<c:if test="${not empty successlogin}">
 		<jsp:include page="Carousel.jsp" />
+		<jsp:include page="categroylist.jsp"></jsp:include>
 	</c:if>
 	<c:if test="${not empty successadmin}">
 		<jsp:include page="headeradmin.jsp" />
