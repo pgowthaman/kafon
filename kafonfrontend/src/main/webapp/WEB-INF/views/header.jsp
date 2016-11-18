@@ -40,15 +40,12 @@ h1, h5 {
 				</ul></li>
 			<li><a href="contact">Contact</a></li>
 			<li><a href="about">About</a></li>
-			<li><a href="#"><label for=""search">Search:</label>
-			 <input type="text" name="search" id="search"
-				placeholder="search,catogeries,booknames,authors...." size="45"></a></li>
 		</ul>
 		<ul class="nav navbar-nav navbar-right">
 			<c:if test="${not empty successlogin}">
 				<li><a href="#">my cart <span
 						class="glyphicon glyphicon-shopping-cart"></span></a></li>
-				<li><a href="home">Logout <span
+				<li><a href="#">Logout <span
 						class="glyphicon glyphicon-log-out"></span></a></li>
 			</c:if>
 			<c:if test="${empty successlogin}">
@@ -59,6 +56,7 @@ h1, h5 {
 			</c:if>
 		</ul>
 	</div>
-	</nav> </header>
+	</nav> 
+</header>
 </body>
 </html>

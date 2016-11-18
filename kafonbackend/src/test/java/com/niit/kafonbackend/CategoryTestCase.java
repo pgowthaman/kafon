@@ -1,5 +1,6 @@
 package com.niit.kafonbackend;
 
+import org.junit.AfterClass;
 import org.junit.Assert;
 import org.junit.BeforeClass;
 import org.junit.Test;
@@ -20,7 +21,7 @@ public class CategoryTestCase {
 	@Autowired
 	static CategoryDAO categoryDAO;
 	
-	@BeforeClass
+	@AfterClass
 	public static void init()
 	{
 		context = new AnnotationConfigApplicationContext();

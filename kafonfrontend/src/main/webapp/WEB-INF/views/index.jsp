@@ -16,7 +16,7 @@
 <style type="text/css">
 body {
 	background-image: url("http://wallpapercave.com/wp/LOodQ4x.jpg");
-	
+	background-size:100%;
 }
 </style>
 </head>

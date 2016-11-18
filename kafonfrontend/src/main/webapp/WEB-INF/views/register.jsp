@@ -217,6 +217,7 @@
 		<input type="text" id="country" name="country">
 		<label for="pin">Pincode:</label>
 		<input type="text" id="pin" name="pin">
+		<button type="resett">reset</button>
 		<button type="submit">register</button>	
 	</form>
 

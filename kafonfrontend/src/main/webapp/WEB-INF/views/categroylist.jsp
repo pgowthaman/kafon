@@ -10,16 +10,17 @@
 <div><h3 style="text-align:center">Categories</h3></div>
 <div class="col-sm-12 col-md-12" > 
   <div class="row"> 
-  <div class="col-sm-2 col-md-2"> 
+  <div class="col-sm-2 col-md-2" "> 
   <div class="thumbnail">  
-  <img src="https://christophermcknightnichols.files.wordpress.com/2013/04/oeamdh.jpg" width="150px" height="150px" alt="">  
+  <img src="https://christophermcknightnichols.files.wordpress.com/2013/04/oeamdh.jpg" 
+  		width="150px" height="150px" alt="" onmouseover="width=200px height=200px">  
   
   <div class="caption"> 
   <h4 class="pull-right"></h4>  
-  <h4><a href="product.html">Knowledge</a></h4>
+  <h4><a href="#">Knowledge</a></h4>
   <p>This categroy will provide all G.K books</p> 
   <div class="ratings">
-  <p class="pull-right"><a href="product. html#comments">15 reviews</a></p>
+  <p class="pull-right"><a href="#">15 reviews</a></p>
   <p><span class="glyphicon glyphicon-star"></span> 
   <span class="glyphicon glyphicon-star"></span>
   <span class="glyphicon glyphicon-star"></span> 
@@ -36,10 +37,10 @@
   
   <div class="caption"> 
   <h4 class="pull-right"></h4>  
-  <h4><a href="product.html">Fictional</a></h4>
+  <h4><a href="#">Fictional</a></h4>
   <p>This category will provide all kind of fictional books</p> 
   <div class="ratings">
-  <p class="pull-right"><a href="product. html#comments">15 reviews</a></p>
+  <p class="pull-right"><a href="#">15 reviews</a></p>
   <p><span class="glyphicon glyphicon-star"></span> 
   <span class="glyphicon glyphicon-star"></span>
   <span class="glyphicon glyphicon-star"></span> 
@@ -56,10 +57,10 @@
   
   <div class="caption"> 
   <h4 class="pull-right"></h4>  
-  <h4><a href="product.html">Story</a></h4>
+  <h4><a href="#">Story</a></h4>
   <p>This category will provide all story books</p> 
   <div class="ratings">
-  <p class="pull-right"><a href="product. html#comments">15 reviews</a></p>
+  <p class="pull-right"><a href="#">15 reviews</a></p>
   <p><span class="glyphicon glyphicon-star"></span> 
   <span class="glyphicon glyphicon-star"></span>
   <span class="glyphicon glyphicon-star"></span> 
@@ -75,10 +76,10 @@
   <img src="http://prodimage.images-bn.com/pimages/9780694003617_p0_v2_s1200x630.jpg" width="170px" height="140px" alt="">  
   <div class="caption"> 
   <h4 class="pull-right"></h4>  
-  <h4><a href="product.html">kids</a></h4>
+  <h4><a href="#">kids</a></h4>
   <p>This category is specially made for kids</p> 
   <div class="ratings">
-  <p class="pull-right"><a href="product. html#comments">15 reviews</a></p>
+  <p class="pull-right"><a href="#">15 reviews</a></p>
   <p><span class="glyphicon glyphicon-star"></span> 
   <span class="glyphicon glyphicon-star"></span>
   <span class="glyphicon glyphicon-star"></span> 
@@ -95,10 +96,10 @@
  
   <div class="caption"> 
   <h4 class="pull-right"></h4>  
-  <h4><a href="product.html">Education</a></h4>
+  <h4><a href="#">Education</a></h4>
   <p>This category will provide all educational field books</p> 
   <div class="ratings">
-  <p class="pull-right"><a href="product. html#comments">15 reviews</a></p>
+  <p class="pull-right"><a href="#">15 reviews</a></p>
   <p><span class="glyphicon glyphicon-star"></span> 
   <span class="glyphicon glyphicon-star"></span>
   <span class="glyphicon glyphicon-star"></span> 
@@ -115,10 +116,10 @@
  
   <div class="caption"> 
   <h4 class="pull-right"></h4>  
-  <h4><a href="product.html">horror</a></h4>
+  <h4><a href="#">horror</a></h4>
   <p>This category consists of scary books</p> 
   <div class="ratings">
-  <p class="pull-right"><a href="product. html#comments">15 reviews</a></p>
+  <p class="pull-right"><a href="#">15 reviews</a></p>
   <p><span class="glyphicon glyphicon-star"></span> 
   <span class="glyphicon glyphicon-star"></span>
   <span class="glyphicon glyphicon-star"></span> 
