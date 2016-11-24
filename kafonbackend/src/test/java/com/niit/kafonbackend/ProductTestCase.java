@@ -6,8 +6,8 @@ import org.junit.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 
-import com.niit.kafon.dao.ProductDAO;
-import com.niit.kafon.model.Product;
+import com.niit.kafonbackend.dao.ProductDAO;
+import com.niit.kafonbackend.model.Product;
 
 
 
